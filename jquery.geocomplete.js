@@ -42,7 +42,7 @@
     strictBounds: false,
     country: null,
     map: false,
-    details: false,
+    details: true,
     detailsAttribute: "name",
     detailsScope: null,
     autoselect: true,
@@ -71,14 +71,13 @@
     "country administrative_area_level_1 administrative_area_level_2 " +
     "administrative_area_level_3 colloquial_area locality sublocality " +
     "neighborhood premise subpremise postal_code natural_feature airport " +
-    "park point_of_interest post_box street_number floor room " +
+    "park point_of_interest post_box street_number " +
     "lat lng viewport location " +
     "formatted_address location_type bounds").split(" ");
 
   // See: [Places Details Responses](https://developers.google.com/maps/documentation/javascript/places#place_details_responses)
   // on Google Developers.
-  var placesDetails = ("id place_id url website vicinity reference name rating " +
-    "international_phone_number icon formatted_phone_number").split(" ");
+  var placesDetails = ("id place_id url website vicinity name  ").split(" ");
 
   // The actual plugin constructor.
   function GeoComplete(input, options) {
